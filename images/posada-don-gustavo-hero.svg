@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="title desc">
+  <title id="title">Logotipo Posada Don Gustavo</title>
+  <desc id="desc">Ilustración de playa con sombrilla, nube y pelota junto al texto Posada Don Gustavo</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#FDF1D9"/>
+      <stop offset="1" stop-color="#F7E6C7"/>
+    </linearGradient>
+    <linearGradient id="umbrella" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F9D07E"/>
+      <stop offset="1" stop-color="#F4B447"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F5C769"/>
+      <stop offset="1" stop-color="#E9AA43"/>
+    </linearGradient>
+    <style>
+      text{font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:600;letter-spacing:1px;}
+    </style>
+  </defs>
+  <rect width="720" height="540" fill="url(#bg)" rx="42"/>
+  <g transform="translate(210 120)">
+    <path d="M310 223c-44 40-136 60-212 44-46-9-88-34-108-60-13-18-10-37 14-52 32-20 88-29 150-22 92 11 182 55 188 84 2 9-3 16-12 22z" fill="url(#sand)"/>
+    <path d="M244 54c43 0 86 21 105 44 7 9 3 17-9 18l-205 13c-13 0-17-9-9-19 19-23 63-56 118-56z" fill="url(#umbrella)"/>
+    <path d="M249 62l32 171c2 13-5 24-17 26s-22-6-24-18l-32-171z" fill="#E19A32"/>
+    <path d="M146 82c12 3 17 17 9 28-20 27-55 36-80 20-11-7-15-20-7-28 19-20 50-27 78-20z" fill="#F5C769"/>
+    <g transform="translate(310 178)">
+      <circle cx="0" cy="0" r="54" fill="#F8F4E9"/>
+      <path d="M-46 -16c12-17 32-28 52-28 20 0 40 11 52 28l-42 42z" fill="#EB3E43"/>
+      <path d="M6 54c-21 0-41-11-53-28l42-42 49 49c-10 13-24 21-38 21z" fill="#F5C769"/>
+      <path d="M-40 -22l88 88" stroke="#F8F4E9" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <path d="M140 22c16-18 52-30 84-26 40 5 73 33 70 54-1 10-10 14-22 9-18-8-46-24-79-29-26-4-41-3-53 0-10 2-17-2-14-8 2-4 7-8 14-10z" fill="#75C2E6"/>
+    <path d="M364 92c34-18 70 4 70 33 0 22-20 38-44 33-28-5-47-35-26-58z" fill="#8BC3E6"/>
+  </g>
+  <g fill="#C83232" text-anchor="middle">
+    <text x="360" y="410" font-size="80">Posada Don</text>
+    <text x="360" y="480" font-size="92">Gustavo</text>
+  </g>
+</svg>
