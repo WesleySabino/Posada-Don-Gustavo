@@ -158,8 +158,25 @@
   /* hero */
   .hero{
     position: relative;
+    display: grid;
+    gap: var(--space-4);
+    align-items: center;
     padding-top: var(--space-5);
     padding-bottom: var(--space-4);
+  }
+  .hero-content{
+    display: grid;
+    gap: var(--space-2);
+  }
+  .hero-visual{
+    justify-self: center;
+    width: min(320px, 80vw);
+    margin: 0;
+  }
+  .hero-visual img{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 16px 36px rgba(0,0,0,.08));
   }
   .badge{
     display: inline-block;
@@ -176,15 +193,11 @@
     max-width: 62ch;
   }
 
-  /* decorative flourish */
-  .flourish-wrap{
-    position: absolute; right: -10px; top: -10px; width: 180px; opacity: .25; pointer-events: none;
-  }
-
   /* quick facts */
   .facts{
     display: grid; gap: var(--space-2);
     margin-top: var(--space-4);
+    grid-column: 1 / -1;
   }
   .fact{
     display: grid; grid-template-columns: 28px 1fr; gap: var(--space-2);
@@ -273,9 +286,13 @@
     .menu-toggle{ display: none; }
 
     /* hero wider spacing on desktop */
-    .hero{ padding-top: 64px; padding-bottom: 36px; }
-    .flourish-wrap{ right: -40px; top: -30px; width: 240px; opacity: .22; }
-
+    .hero{
+      grid-template-columns: 1.1fr .9fr;
+      padding-top: 72px;
+      padding-bottom: 48px;
+    }
+    .hero-visual{ justify-self: end; width: min(420px, 100%); }
+  
     /* desktop grids */
     .rooms-grid{ grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
     .services-grid{ grid-template-columns: repeat(3, 1fr); }
@@ -324,33 +341,20 @@
 <main id="contenido">
   <!-- Hero -->
   <section id="inicio" class="hero container" aria-labelledby="hero-title">
-    <span class="badge" aria-label="Posada acogedora y luminosa">Posada acogedora</span>
-    <h1 id="hero-title">Posada Don Gustavo</h1>
-    <p class="lead">
-      Una posada luminosa y tranquila en Encarnación: ideal para descansar, trabajar con buena conexión
-      y alojarte durante entrenamientos o torneos deportivos. Atendida con cariño de hogar, con desayuno
-      casero y espacios cómodos.
-    </p>
-
-    <!-- subtle background flourish (inline SVG) -->
-    <div class="flourish-wrap" role="img" aria-label="Motivo floral claro y suave en el fondo, estilo acogedor">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="false">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#91AE9A"/>
-            <stop offset="1" stop-color="#E9C1C6"/>
-          </linearGradient>
-        </defs>
-        <g fill="url(#g1)">
-          <circle cx="60" cy="60" r="28" opacity=".35"/>
-          <circle cx="120" cy="40" r="18" opacity=".35"/>
-          <circle cx="150" cy="100" r="22" opacity=".35"/>
-          <circle cx="95" cy="115" r="16" opacity=".35"/>
-          <path d="M30,170 C80,120 120,150 170,110" stroke="#D17356" stroke-width="4" fill="none" opacity=".25" />
-          <path d="M40,140 C70,110 100,130 140,90" stroke="#91AE9A" stroke-width="6" fill="none" opacity=".2" />
-        </g>
-      </svg>
+    <div class="hero-content">
+      <span class="badge" aria-label="Posada acogedora y luminosa">Posada acogedora</span>
+      <h1 id="hero-title">Posada Don Gustavo</h1>
+      <p class="lead">
+        Una posada luminosa y tranquila en Encarnación: ideal para descansar, trabajar con buena conexión
+        y alojarte durante entrenamientos o torneos deportivos. Atendida con cariño de hogar, con desayuno
+        casero y espacios cómodos.
+      </p>
+      <a class="btn btn-primary" href="#contacto">Planificar mi estadía</a>
     </div>
+
+    <figure class="hero-visual">
+      <img src="images/posada-don-gustavo-hero.svg" alt="Logotipo ilustrado de Posada Don Gustavo con playa, sombrilla y pelota" loading="lazy">
+    </figure>
 
     <!-- Quick facts -->
     <div class="facts" aria-labelledby="facts-title">
